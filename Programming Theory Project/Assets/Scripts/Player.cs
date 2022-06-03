@@ -5,24 +5,36 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private float verticalInput;
+    private Rigidbody playerRb;
     [SerializeField] private float speed;
     [SerializeField] private float xRange = 2;
+    [SerializeField] private float jumpForce;
 
     void Start()
     {
-        
+        playerRb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
+        Jump();
         VerticalMovement();
         Boundary();
+
     }
 
     public void VerticalMovement()
     {
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.right * Time.deltaTime * speed * verticalInput);
+    }
+
+    public void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     public void Boundary()
