@@ -14,6 +14,7 @@ public class Cat : Animal //Inheritance
     void Update()
     {
         Jump();
+        Move();
         onGround = false;
     }
 
