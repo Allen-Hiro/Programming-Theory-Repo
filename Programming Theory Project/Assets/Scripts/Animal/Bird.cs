@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour
+public class Bird : Animal //Inheritance
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float birdSpeed; //Encapsulation
 
-    // Update is called once per frame
-    void Update()
+    //Inheritance
+    public override void Move()     //Polymorphism
     {
-        
+        transform.Translate(Vector3.forward * Time.deltaTime * birdSpeed);
     }
 }

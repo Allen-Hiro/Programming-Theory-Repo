@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float speed; //Encapsulation
     private float mapBoundary = 15;
     void Update()
     {
-        Movement();
-        AnimalBoundary();
+        Move(); //Abstraction
+        AnimalBoundary(); //Abstraction
     }
 
-    public void Movement()
+    public virtual void Move()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }

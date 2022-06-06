@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cat : Animal
+public class Cat : Animal //Inheritance
 {
     private Rigidbody catRb;
     private bool onGround = false;
-    [SerializeField] private float catJump;
+    [SerializeField] private float catJump; //Encapsulation
     private void Start()
     {
         catRb = GetComponent<Rigidbody>();

@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dog : MonoBehaviour
+public class Dog : Animal //Inheritance
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float dogSpeed; //Encapsulation
 
-    // Update is called once per frame
-    void Update()
+
+    public override void Move()     //Polymorphism
     {
-        
+        transform.Translate(Vector3.forward * Time.deltaTime * dogSpeed);
     }
 }

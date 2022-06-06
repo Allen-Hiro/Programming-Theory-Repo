@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private float verticalInput;
     private Rigidbody playerRb;
+    //Encapsulation
     [SerializeField] private float speed;
     [SerializeField] private float xRange = 2;
     [SerializeField] private float jumpForce;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //Abstraction
         Jump();
         VerticalMovement();
         Boundary();
