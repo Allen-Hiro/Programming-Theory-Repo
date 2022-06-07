@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6056411544904560558}
   - component: {fileID: 6056411544904560545}
   - component: {fileID: 6056411544904560546}
+  - component: {fileID: 8498719392324855159}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 63976a4674728924098082112b63f0d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,5 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730b93f19cb2b584eb019d0cdf62edd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  birdSpeed: 1
+  speed: 4
+  birdSpeed: 4
+--- !u!114 &8498719392324855159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6056411544904560556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b10fb87eaebe3449c98ac0a66504cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4

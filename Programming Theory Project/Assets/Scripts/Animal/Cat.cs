@@ -15,6 +15,7 @@ public class Cat : Animal //Inheritance
     {
         Jump();
         Move();
+        AnimalBoundary();
         onGround = false;
     }
 
